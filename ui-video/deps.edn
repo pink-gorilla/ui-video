@@ -1,9 +1,6 @@
 {:paths ["src"
-         "resources"] ; goldly ext
- :deps {bidi/bidi {:mvn/version "2.1.6"}
-        clj-commons/pushy {:mvn/version "0.3.10"}
-        com.cemerick/url {:mvn/version "0.1.1"}  ; url query-strings
-  }
+         "resources"] ; goldly ext, notebooks
+ :deps {}
 
  :aliases
  {:outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
