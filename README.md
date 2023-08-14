@@ -4,3 +4,10 @@
 
 
 A wrapper for react-player to play videos.
+
+```
+cd ui-video
+clj -X:goldly:npm-install
+clj -X:goldly:compile
+clj -X:goldly
+```

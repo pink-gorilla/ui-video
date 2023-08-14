@@ -38,3 +38,5 @@ creds-localhost.edn
 \#*\#
 .\#*
 .~*
+ui-video/karma.conf.js
+ui-video/src/goldly_bindings_generated.cljs
