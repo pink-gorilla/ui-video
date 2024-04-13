@@ -1,7 +1,7 @@
 (ns ui.video
   (:require
    ;["react-player" :refer [ReactPlayer]]
-   ["react-youtube" :as [YouTube]]
+   ["react-youtube" :as YouTube]
    ))
 
 #_(defn video
