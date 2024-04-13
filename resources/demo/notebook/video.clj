@@ -2,11 +2,12 @@
 
 ;; video
 
+ 
+
 (defn youtube [id]
-  ['ui.video/youtube {;:box :lg
-                      ;:controls true
-                      :videoId id
-                    }])
+  ['ui.video/youtube {:videoId id
+                      :opts {:height "390" 
+                             :width "640"}}])
 
 (defn show-video [[name id]]
   [:div

@@ -22,7 +22,7 @@
    ['ui.video/youtube {:url url :playing false}]
    
    for more config options, see:
-   https://www.npmjs.com/package/react-player
+   https://www.npmjs.com/package/react-youtube
    "
   [props]
-  [:> YouTube props]) ; {:url url :playing true}
+  [:> YouTube props])
