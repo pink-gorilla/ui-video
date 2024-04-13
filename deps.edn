@@ -1,0 +1,40 @@
+{:paths ["src"
+         "resources"] ; goldly ext, notebooks
+ :deps {}
+
+ :aliases
+ {; github ci
+  :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}
+                 slipset/deps-deploy {:mvn/version "0.2.1"}
+                 babashka/fs {:mvn/version "0.0.5"}}
+          :ns-default build}
+
+
+   ; demo ui
+  :webly {:exec-fn webly.app.app/webly-build
+          :extra-deps {org.pinkgorilla/webly {:mvn/version "0.5.661"}
+                       org.pinkgorilla/ui-repl {:mvn/version "0.1.94"}}
+          :extra-paths ["demo" "demo/resources"]
+          :exec-args {:config ["demo-config.edn"]
+                      :profile "npm-install"}}
+
+  :npm-install {:exec-args {:profile "npm-install"}}
+  :compile {:exec-args {:profile "compile2"}}
+  :release {:exec-args {:profile "release"}}
+  :release-adv {:exec-args {:profile "release-adv"}}
+  :static {:exec-args {:profile "static"}}
+  :ci {:exec-args {:profile "ci"}}
+
+  :run {:exec-fn modular.system/start!
+        :extra-paths ["demo" "demo/resources"]
+        :exec-args {:profile "jetty"
+                    :config  ["demo-config.edn"]
+                    :services "demo-services.edn"}}
+
+
+
+
+;
+  }}
+
+

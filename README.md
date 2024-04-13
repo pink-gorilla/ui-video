@@ -3,7 +3,6 @@
 **End Users** this project is not for you.
 
 
-A wrapper for react-player to play videos.
 
 ```
 cd ui-video
@@ -11,3 +10,14 @@ clj -X:goldly:npm-install
 clj -X:goldly:compile
 clj -X:goldly
 ```
+
+## youtube-player
+
+ui.video/youtubehttps://www.npmjs.com/package/react-youtube
+
+
+## react-player
+
+- A wrapper for react-player to play videos.
+- react-player v2 no longer works with shadow-cljs, because of dynamic imports that
+  are not supported in clojure-compiler
