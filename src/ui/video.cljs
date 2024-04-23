@@ -1,7 +1,7 @@
 (ns ui.video
   (:require
    ;["react-player" :refer [ReactPlayer]]
-   ["react-youtube" :as YouTube]
+   ["react-youtube" :refer [default] ]
    ))
 
 #_(defn video
@@ -25,4 +25,4 @@
    https://www.npmjs.com/package/react-youtube
    "
   [props]
-  [:> YouTube props])
+  [:> default props])

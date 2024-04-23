@@ -1,0 +1,8 @@
+{:name "demo"
+  ; build
+ :lazy true
+ :depends-on #{:ui-video}
+ :cljs-namespace [page]
+ :cljs-ns-bindings {'page {'demo-page page/demo-page}}
+ ; run
+ :cljs-routes {"" page/demo-page}}

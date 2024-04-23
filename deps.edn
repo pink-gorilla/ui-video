@@ -12,10 +12,10 @@
 
    ; demo ui
   :webly {:exec-fn webly.app.app/webly-build
-          :extra-deps {org.pinkgorilla/webly {:mvn/version "0.5.661"}
-                       org.pinkgorilla/ui-repl {:mvn/version "0.1.94"}}
+          :extra-deps {org.pinkgorilla/webly {:mvn/version "0.5.683"}
+                       org.pinkgorilla/ui-repl {:mvn/version "0.1.104"}}
           :extra-paths ["demo" "demo/resources"]
-          :exec-args {:config ["demo-config.edn"]
+          :exec-args {:config [{}]
                       :profile "npm-install"}}
 
   :npm-install {:exec-args {:profile "npm-install"}}
@@ -28,7 +28,7 @@
   :run {:exec-fn modular.system/start!
         :extra-paths ["demo" "demo/resources"]
         :exec-args {:profile "jetty"
-                    :config  ["demo-config.edn"]
+                    :config  [{}]
                     :services "demo-services.edn"}}
 
 
